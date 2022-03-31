@@ -24,6 +24,8 @@ public class JwtAuthenticationFilter extends GenericFilterBean {
         // 헤더에서 JWT 받아옴
         String token = jwtTokenProvider.resolveToken((HttpServletRequest) request);
 
+        //나중에 수정할 부분
+
         // 유효한 토큰인지 확인
         if (token != null && token.startsWith("Bearer ")) {
             val jwtToken = token.substring(7);
